@@ -1,1 +1,177 @@
-placeholder
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lawrenceville Medical Business Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="mode-tabs" aria-label="Dashboards">
+      <a class="active" href="/">Core medical path</a>
+      <a href="/medical.html">139 medical niche ideas</a>
+    </nav>
+
+    <header>
+      <div class="brand"><span class="brand-dot"></span> Lawrenceville · Medical Launch Lab</div>
+      <h1>Medical business ideas you can start with $20k</h1>
+      <p class="lede">
+        Built for a software engineer + PA spouse in Lawrenceville / Gwinnett County, GA.
+        Ideas are ranked for speed, Georgia legal fit, capital fit, and upside.
+      </p>
+      <div class="meta-row">
+        <span class="chip"><strong>Budget:</strong> $20,000</span>
+        <span class="chip"><strong>Market:</strong> Gwinnett (1M+ people)</span>
+        <span class="chip"><strong>Edge:</strong> PA clinical + your tech/content</span>
+        <span class="chip"><strong>Constraint:</strong> PA cannot own the medical entity in GA</span>
+      </div>
+    </header>
+
+    <aside class="alert">
+      <h2>Georgia legal reality (do this first)</h2>
+      <p>
+        In Georgia, a PA cannot own a medical practice or med spa. Clinical care must sit in a
+        physician-owned entity, with a board-approved supervising physician and PA job description.
+        Your best path: you own a Management Services Organization (MSO) for marketing, ops, and software;
+        a physician owns the clinical PC; your wife practices under that physician. As of May 2026, GCMB
+        tightened “rent-a-supervisor” and IV/med-spa oversight — get a healthcare attorney before treating patients.
+      </p>
+    </aside>
+
+    <section class="stats" aria-label="Market snapshot">
+      <article class="stat">
+        <div class="label">Primary care gap</div>
+        <div class="value">Tight</div>
+        <div class="hint">Gwinnett ranks near bottom of GA for PCP access</div>
+      </article>
+      <article class="stat">
+        <div class="label">Full med spa cost</div>
+        <div class="value">$150k+</div>
+        <div class="hint">Too heavy for a $20k solo launch</div>
+      </article>
+      <article class="stat">
+        <div class="label">MD oversight</div>
+        <div class="value">$1.5–6k/mo</div>
+        <div class="hint">Burns capital if you fund alone</div>
+      </article>
+      <article class="stat">
+        <div class="label">Best $20k path</div>
+        <div class="value">MSO + niche</div>
+        <div class="hint">Partner MD space, cash-pay services</div>
+      </article>
+    </section>
+
+    <div class="layout">
+      <aside class="filters" aria-label="Filters">
+        <h3>Filter ideas</h3>
+        <div class="filter-group">
+          <label class="group-label">Start speed</label>
+          <label class="check"><input type="checkbox" data-filter="speed" value="now" checked /> This month</label>
+          <label class="check"><input type="checkbox" data-filter="speed" value="60" checked /> 30–60 days</label>
+          <label class="check"><input type="checkbox" data-filter="speed" value="later" checked /> 3+ months</label>
+        </div>
+        <div class="filter-group">
+          <label class="group-label">Capital fit</label>
+          <label class="check"><input type="checkbox" data-filter="capital" value="yes" checked /> Fits $20k</label>
+          <label class="check"><input type="checkbox" data-filter="capital" value="stretch" checked /> Stretch / partner</label>
+          <label class="check"><input type="checkbox" data-filter="capital" value="no" checked /> Needs more capital</label>
+        </div>
+        <div class="filter-group">
+          <label class="group-label">Model type</label>
+          <label class="check"><input type="checkbox" data-filter="type" value="clinical" checked /> Clinical (PA treats)</label>
+          <label class="check"><input type="checkbox" data-filter="type" value="business" checked /> Business / MSO</label>
+          <label class="check"><input type="checkbox" data-filter="type" value="hybrid" checked /> Hybrid</label>
+        </div>
+        <button class="primary-btn" id="showTop" type="button">Show top 3 only</button>
+        <button class="reset-btn" id="resetFilters" type="button">Reset filters</button>
+      </aside>
+
+      <main>
+        <div class="toolbar">
+          <div class="count"><span id="visibleCount">0</span> ideas shown</div>
+          <label class="sort">Sort by
+            <select id="sortBy">
+              <option value="score">Overall score</option>
+              <option value="money">Money potential</option>
+              <option value="speed">Speed to start</option>
+              <option value="fit">$20k fit</option>
+            </select>
+          </label>
+        </div>
+        <div class="cards" id="cards"></div>
+      </main>
+    </div>
+
+    <section class="plan" id="action-plan">
+      <h2>Recommended move with $20k</h2>
+      <p class="lede" style="max-width:70ch;margin-bottom:0">
+        Do <strong>not</strong> lease a full med spa yet. Launch a lean cash-pay medical niche
+        inside a physician partner’s space (or rent a treatment room by the day), while you own the MSO
+        that handles Instagram ads, booking, and ops.
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="n">01</div>
+          <h3>Pick one niche</h3>
+          <p>Neurotoxins/fillers OR medically supervised weight-loss. One offer only for 90 days.</p>
+        </div>
+        <div class="step">
+          <div class="n">02</div>
+          <h3>Find MD partner</h3>
+          <p>Physician owns clinical PC; your wife gets job description filed; you own marketing/ops LLC.</p>
+        </div>
+        <div class="step">
+          <div class="n">03</div>
+          <h3>Spend $20k smart</h3>
+          <p>Legal structure, malpractice, training, starter inventory, and patient-acquisition ads.</p>
+        </div>
+        <div class="step">
+          <div class="n">04</div>
+          <h3>Fill the calendar</h3>
+          <p>Your Instagram + local Reels drive cash patients; PA delivers care; reinvest profits.</p>
+        </div>
+      </div>
+
+      <div class="budget">
+        <div>
+          <h3 style="font-family:'Fraunces',Georgia,serif;margin:0 0 0.5rem">Sample $20,000 allocation</h3>
+          <table class="budget-table">
+            <thead>
+              <tr><th>Item</th><th>Amount</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Healthcare attorney (MSO + contracts)</td><td>$2,500–$4,000</td></tr>
+              <tr><td>Malpractice + business insurance (start)</td><td>$2,000–$3,500</td></tr>
+              <tr><td>PA aesthetics / injectables training (if needed)</td><td>$2,000–$4,000</td></tr>
+              <tr><td>Starter product inventory</td><td>$4,000–$6,000</td></tr>
+              <tr><td>Booking site, EMR lite, supplies</td><td>$1,500–$2,500</td></tr>
+              <tr><td>Local Instagram / Meta ads + content kit</td><td>$3,000–$4,000</td></tr>
+              <tr><td>Cash reserve (first 30–45 days)</td><td>$2,000–$3,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note">
+          <strong style="color:var(--ink)">Money math (injectables example):</strong><br />
+          If your wife sees 8–12 cash patients/day, 2 days/week, monthly revenue can reach the mid five figures once booked — before room share and MD arrangements.
+          Weight-loss memberships ($150–$400+/mo) create recurring cash if clinically compliant.
+          <br /><br />
+          This is planning research, not legal or medical advice. Confirm structure with a Georgia healthcare attorney and the Composite Medical Board before treating patients.
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Sources synthesized for Lawrenceville / Gwinnett market conditions, Georgia ownership limits for PAs,
+      2026 GCMB supervision guidance, med-spa cost ranges, and local primary-care access pressure.
+      Income figures are planning estimates, not guarantees.
+    </footer>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
