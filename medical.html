@@ -1,1 +1,158 @@
-LC
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>139 Medical Niche Ideas · Lawrenceville</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="mode-tabs" aria-label="Dashboards">
+      <a href="/">Core medical path</a>
+      <a class="active" href="/medical.html">139 medical niche ideas</a>
+    </nav>
+
+    <header>
+      <div class="brand"><span class="brand-dot"></span> Lawrenceville · Medical Niche Lab</div>
+      <h1>139 more medical-niche ideas you can actually start</h1>
+      <p class="lede">
+        Same niche as before: healthcare / cash-pay clinic / medical MSO — built for a software engineer
+        + PA spouse in Lawrenceville with about $20k. Ranked for low operational risk, strong margins,
+        and Georgia PA reality (MD-owned clinical entity + your MSO).
+      </p>
+      <div class="meta-row">
+        <span class="chip"><strong>Niche:</strong> Medical only</span>
+        <span class="chip"><strong>Count:</strong> 139 ideas</span>
+        <span class="chip"><strong>Budget lens:</strong> ≤ $20k</span>
+        <span class="chip"><strong>Bias:</strong> Low risk + high margin</span>
+      </div>
+    </header>
+
+    <aside class="alert">
+      <h2>Read this before chasing “hot” medical money</h2>
+      <p>
+        In Georgia a PA cannot own the medical practice. Clinical ideas need a physician-owned PC,
+        supervising physician, and board-approved job description. IV, GLP-1, TRT, and peptides can
+        look profitable but carry high board risk in 2026 — treat those as advanced only with an attorney
+        and a real MD partner. Lowest-risk high-profit starts are usually medical MSOs, content for clinics,
+        and room-share cash aesthetics under proper supervision.
+      </p>
+    </aside>
+
+    <section class="stats" aria-label="Quick picks">
+      <article class="stat">
+        <div class="label">Lowest risk money</div>
+        <div class="value">Clinic MSO</div>
+        <div class="hint">Reels, SEO, booking automation</div>
+      </article>
+      <article class="stat">
+        <div class="label">Best clinical lean</div>
+        <div class="value">Aesthetics days</div>
+        <div class="hint">MD host + injectables</div>
+      </article>
+      <article class="stat">
+        <div class="label">Best recurring</div>
+        <div class="value">Membership care</div>
+        <div class="hint">Weight loss / HRT if compliant</div>
+      </article>
+      <article class="stat">
+        <div class="label">Your edge</div>
+        <div class="value">PA + software</div>
+        <div class="hint">Clinical trust + systems</div>
+      </article>
+    </section>
+
+    <div class="layout">
+      <aside class="filters" aria-label="Filters">
+        <h3>Filter ideas</h3>
+        <div class="filter-group">
+          <label class="group-label">Search</label>
+          <input id="search" class="search-box" type="search" placeholder="Botox, TRT, prior auth, MSO…" />
+        </div>
+        <div class="filter-group">
+          <label class="group-label">Start speed</label>
+          <label class="check"><input type="checkbox" data-filter="speed" value="now" checked /> This month</label>
+          <label class="check"><input type="checkbox" data-filter="speed" value="30" checked /> ~30 days</label>
+          <label class="check"><input type="checkbox" data-filter="speed" value="60" checked /> 30–60+ days</label>
+        </div>
+        <div class="filter-group">
+          <label class="group-label">Capital</label>
+          <label class="check"><input type="checkbox" data-filter="capital" value="under5k" checked /> Under $5k</label>
+          <label class="check"><input type="checkbox" data-filter="capital" value="5to12k" checked /> $5k–$12k</label>
+          <label class="check"><input type="checkbox" data-filter="capital" value="12to20k" checked /> $12k–$20k</label>
+        </div>
+        <div class="filter-group">
+          <label class="group-label">Medical category</label>
+          <label class="check"><input type="checkbox" data-filter="category" value="Medical MSO" checked /> Medical MSO</label>
+          <label class="check"><input type="checkbox" data-filter="category" value="Medical content" checked /> Medical content</label>
+          <label class="check"><input type="checkbox" data-filter="category" value="Aesthetics" checked /> Aesthetics</label>
+          <label class="check"><input type="checkbox" data-filter="category" value="Weight loss" checked /> Weight loss</label>
+          <label class="check"><input type="checkbox" data-filter="category" value="Hormones" checked /> Hormones</label>
+          <label class="check"><input type="checkbox" data-filter="category" value="Telehealth" checked /> Telehealth</label>
+          <label class="check"><input type="checkbox" data-filter="category" value="Mobile care" checked /> Mobile care</label>
+          <label class="check"><input type="checkbox" data-filter="category" value="Specialty clinic" checked /> Specialty clinic</label>
+          <label class="check"><input type="checkbox" data-filter="category" value="Wellness" checked /> Wellness</label>
+          <label class="check"><input type="checkbox" data-filter="category" value="Training" checked /> Training</label>
+          <label class="check"><input type="checkbox" data-filter="category" value="Med retail" checked /> Med retail</label>
+        </div>
+        <button class="primary-btn" id="showTop" type="button">Show top 12 only</button>
+        <button class="reset-btn" id="resetFilters" type="button">Reset filters</button>
+      </aside>
+
+      <main>
+        <div class="toolbar">
+          <div class="count"><span id="visibleCount">0</span> medical ideas shown</div>
+          <label class="sort">Sort by
+            <select id="sortBy">
+              <option value="score">Best overall</option>
+              <option value="money">Profit potential</option>
+              <option value="risk">Lowest risk</option>
+              <option value="speed">Fastest start</option>
+              <option value="capital">Easiest capital</option>
+            </select>
+          </label>
+        </div>
+        <div class="cards" id="cards"></div>
+      </main>
+    </div>
+
+    <section class="plan">
+      <h2>If you want medical money with the least regret</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="n">01</div>
+          <h3>MSO this week</h3>
+          <p>Sell Reels + Google + booking automation to local clinics while you keep the day job.</p>
+        </div>
+        <div class="step">
+          <div class="n">02</div>
+          <h3>MD partner</h3>
+          <p>Find a physician who will own the clinical PC and supervise your wife’s job description.</p>
+        </div>
+        <div class="step">
+          <div class="n">03</div>
+          <h3>Lean aesthetics</h3>
+          <p>Room-share Botox/filler days before any med-spa buildout.</p>
+        </div>
+        <div class="step">
+          <div class="n">04</div>
+          <h3>Add memberships later</h3>
+          <p>Only after legal structure is clean: weight loss / HRT memberships.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Medical business planning research for Lawrenceville / Gwinnett. Not legal, medical, or financial advice.
+      Confirm structure with a Georgia healthcare attorney and the Composite Medical Board before treating patients.
+    </footer>
+  </div>
+
+  <script src="/medical-ideas.js"></script>
+  <script src="/medical-app.js"></script>
+</body>
+</html>
