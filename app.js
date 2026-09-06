@@ -1,2 +1,1 @@
-// Temporary stub â€” full app.js restore follows
-console.log("lawrenceville dashboard loading");
+<°s‹DAë
